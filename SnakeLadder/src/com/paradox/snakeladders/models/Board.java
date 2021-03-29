@@ -1,4 +1,4 @@
-package com.paradox.geeks.models;
+package com.paradox.snakeladders.models;
 
 import java.util.*;
 

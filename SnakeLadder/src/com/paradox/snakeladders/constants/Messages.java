@@ -1,4 +1,4 @@
-package com.paradox.geeks.constants;
+package com.paradox.snakeladders.constants;
 
 public class Messages {
     private static final String WINNER = MessageKeys.PLAYER_NAME + " is winner no. " + MessageKeys.WINNER_COUNT + " after rolling " + MessageKeys.DICE_VALUE;

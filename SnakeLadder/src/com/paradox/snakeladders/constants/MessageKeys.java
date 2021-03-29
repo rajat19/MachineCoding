@@ -1,4 +1,4 @@
-package com.paradox.geeks.constants;
+package com.paradox.snakeladders.constants;
 
 public class MessageKeys {
     public static final String PLAYER_NAME = "%playerName";

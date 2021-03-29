@@ -1,6 +1,6 @@
-package com.paradox.geeks;
+package com.paradox.snakeladders;
 
-import com.paradox.geeks.services.PlayGame;
+import com.paradox.snakeladders.services.PlayGame;
 
 import java.io.File;
 import java.io.FileNotFoundException;

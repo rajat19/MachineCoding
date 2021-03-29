@@ -1,7 +1,7 @@
-package com.paradox.geeks.services;
+package com.paradox.snakeladders.services;
 
-import com.paradox.geeks.constants.Messages;
-import com.paradox.geeks.models.*;
+import com.paradox.snakeladders.constants.Messages;
+import com.paradox.snakeladders.models.*;
 
 import java.util.ArrayList;
 import java.util.HashSet;
