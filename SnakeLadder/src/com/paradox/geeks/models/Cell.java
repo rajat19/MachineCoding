@@ -40,4 +40,6 @@ public class Cell {
     public boolean hasLadder() {
         return getLadder() != null;
     }
+
+    public boolean isLastLocation() { return getLocation() == 100; }
 }

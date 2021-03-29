@@ -5,4 +5,5 @@ public class MessageKeys {
     public static final String DICE_VALUE = "%diceValue";
     public static final String INITIAL_POS = "%initialPos";
     public static final String FINAL_POS = "%finalPos";
+    public static final String WINNER_COUNT = "%winnerCount";
 }

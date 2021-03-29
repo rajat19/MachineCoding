@@ -1,14 +1,19 @@
 package com.paradox.geeks.constants;
 
 public class Messages {
-    private static final String WINNER = MessageKeys.PLAYER_NAME + " wins the game";
+    private static final String WINNER = MessageKeys.PLAYER_NAME + " is winner no. " + MessageKeys.WINNER_COUNT + " after rolling " + MessageKeys.DICE_VALUE;
     private static final String MAKE_MOVE = MessageKeys.PLAYER_NAME + " rolled a " + MessageKeys.DICE_VALUE + " and moved from " + MessageKeys.INITIAL_POS + " to " + MessageKeys.FINAL_POS;
     private static final String CANNOT_MOVE = MessageKeys.PLAYER_NAME + " got " + MessageKeys.DICE_VALUE + ", so cannot move ahead";
     private static final String GOT_SNAKE = ":(   " + MessageKeys.PLAYER_NAME + " faced a snake, and now moved to " + MessageKeys.FINAL_POS;
     private static final String GOT_LADDER = ":)   " + MessageKeys.PLAYER_NAME + " climbed a ladder, and now moved to " + MessageKeys.FINAL_POS;
 
-    public static void printWinnerMessage(String playerName) {
-        System.out.println(WINNER.replace(MessageKeys.PLAYER_NAME, playerName));
+    public static void printWinnerMessage(String playerName, int winnerCount, int diceValue) {
+        System.out.println("#############################");
+        String message = WINNER.replace(MessageKeys.PLAYER_NAME, playerName)
+                .replace(MessageKeys.WINNER_COUNT, Integer.toString(winnerCount))
+                .replace(MessageKeys.DICE_VALUE, Integer.toString(diceValue));
+        System.out.println(message);
+        System.out.println("#############################");
     }
 
     public static void printMakeMoveMessage(String playerName, int diceValue, int initialPos, int finalPos) {
