@@ -7,11 +7,11 @@ import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.Scanner;
 
-public class Main {
+public class SnakeLadderApplication {
     public static void main(String[] args) throws FileNotFoundException {
         PlayGame playGame = new PlayGame();
 
-        URL url = Main.class.getResource("./input.txt");
+        URL url = SnakeLadderApplication.class.getResource("./input.txt");
         File file = new File(url.getPath());
         Scanner scanner = new Scanner(file);
 
