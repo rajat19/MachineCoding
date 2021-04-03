@@ -9,7 +9,7 @@ public class BoardList {
     private String id;
     private String name;
     private Map<String, Card> cardMap;
-    private Board board;
+    private final Board board;
 
     public BoardList(String id, String name, Board board) {
         this.id = id;

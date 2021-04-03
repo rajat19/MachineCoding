@@ -1,6 +1,5 @@
 package com.paradox.trello.services;
 
-import com.paradox.trello.exceptions.IllegalBoardListException;
 import com.paradox.trello.exceptions.IllegalCardException;
 import com.paradox.trello.models.BoardList;
 import com.paradox.trello.models.Card;
@@ -11,12 +10,10 @@ import java.util.Map;
 
 public class CardService {
     private static CardService cardService;
-    private final BoardListService boardListService;
     private final Map<String, Card> cardMap;
 
     private CardService() {
         this.cardMap = new HashMap<>();
-        this.boardListService = BoardListService.getInstance();
     }
 
     public static synchronized CardService getInstance() {
@@ -26,21 +23,15 @@ public class CardService {
         return cardService;
     }
 
-    public void createCard(String listId, String cardId, String cardName) throws IllegalBoardListException {
-        if (!boardListService.getBoardListMap().containsKey(listId)) {
-            throw new IllegalBoardListException(listId);
-        }
-        BoardList boardList = boardListService.getBoardListMap().get(listId);
+    public void createCard(BoardList boardList, String cardId, String cardName) {
         Card card = new Card(cardId, cardName, "", boardList);
         boardList.addCard(card);
         this.cardMap.put(cardId, card);
+        System.out.println("Created Card:: "+cardId);
     }
 
-    public void deleteCards(String boardListId) throws IllegalCardException, IllegalBoardListException {
-        if (!boardListService.getBoardListMap().containsKey(boardListId)) {
-            throw new IllegalBoardListException(boardListId);
-        }
-        Map<String, Card> cardMap = boardListService.getBoardListMap().get(boardListId).getCards();
+    public void deleteCards(BoardList boardList) throws IllegalCardException {
+        Map<String, Card> cardMap = boardList.getCards();
         for (String listId: cardMap.keySet()) {
             deleteCard(listId);
         }
@@ -72,19 +63,26 @@ public class CardService {
         card.setAssignedUser(null);
     }
 
-    public void moveCard(String cardId, String newListId) throws IllegalCardException, IllegalBoardListException {
+    public void moveCard(String cardId, BoardList newBoardList) throws IllegalCardException {
         if (!cardMap.containsKey(cardId)) {
             throw new IllegalCardException(cardId);
-        }
-        if (!boardListService.getBoardListMap().containsKey(newListId)) {
-            throw new IllegalBoardListException(newListId);
         }
         Card card = cardMap.get(cardId);
         BoardList originalList = card.getBoardList();
         originalList.deleteCard(card);
-        BoardList newList = boardListService.getBoardListMap().get(newListId);
-        newList.addCard(card);
-        card.setBoardList(newList);
+        newBoardList.addCard(card);
+        card.setBoardList(newBoardList);
+    }
+
+    public void updateCard(String id, String key, String value) throws IllegalCardException {
+        if (!cardMap.containsKey(id)) {
+            throw new IllegalCardException(id);
+        }
+        Card card = cardMap.get(id);
+        switch (key) {
+            case "name": card.setName(value); break;
+            case "description": card.setDescription(value); break;
+        }
     }
 
     public void showCard(String cardId) throws IllegalCardException {

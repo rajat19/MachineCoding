@@ -1,6 +1,5 @@
 package com.paradox.trello.services;
 
-import com.paradox.trello.exceptions.IllegalBoardException;
 import com.paradox.trello.exceptions.IllegalBoardListException;
 import com.paradox.trello.exceptions.IllegalCardException;
 import com.paradox.trello.models.BoardList;
@@ -10,13 +9,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class BoardListService {
-    private final BoardService boardService;
     private static BoardListService boardListService;
     private final CardService cardService;
     private final Map<String, BoardList> boardListMap;
 
     private BoardListService() {
-        boardService = BoardService.getBoardServiceInstance();
         cardService = CardService.getInstance();
         boardListMap = new HashMap<>();
     }
@@ -28,25 +25,22 @@ public class BoardListService {
         return boardListService;
     }
 
-    public Map<String, BoardList> getBoardListMap() {
-        return boardListMap;
+    public BoardList getBoardList(String boardListId) throws IllegalBoardListException {
+        if (!boardListMap.containsKey(boardListId)) {
+            throw new IllegalBoardListException(boardListId);
+        }
+        return boardListMap.get(boardListId);
     }
 
-    public void createList(String boardId, String listId, String listName) throws IllegalBoardException {
-        if (!boardService.getBoardMap().containsKey(boardId)) {
-            throw new IllegalBoardException(boardId);
-        }
-        Board board = boardService.getBoardMap().get(boardId);
+    public void createList(Board board, String listId, String listName) {
         BoardList boardList = new BoardList(listId, listName, board);
         boardListMap.put(boardList.getId(), boardList);
-        boardService.getBoardMap().get(boardId).addBoardList(boardList);
+        board.addBoardList(boardList);
+        System.out.println("Created List:: "+listId);
     }
 
-    public void deleteLists(String boardId) throws IllegalBoardException, IllegalBoardListException, IllegalCardException {
-        if (!boardService.getBoardMap().containsKey(boardId)) {
-            throw new IllegalBoardException(boardId);
-        }
-        Map<String, BoardList> boardListMap = boardService.getBoardMap().get(boardId).getLists();
+    public void deleteLists(Board board) throws IllegalBoardListException, IllegalCardException {
+        Map<String, BoardList> boardListMap = board.getLists();
         for (String listId: boardListMap.keySet()) {
             deleteList(listId);
         }
@@ -58,7 +52,7 @@ public class BoardListService {
         }
         BoardList boardList = boardListMap.get(listId);
         Board board = boardList.getBoard();
-        cardService.deleteCards(boardList.getId());
+        cardService.deleteCards(boardList);
         boardListMap.remove(listId);
         board.deleteBoardList(boardList);
     }

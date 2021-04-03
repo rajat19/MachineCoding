@@ -1,9 +1,6 @@
 package com.paradox.trello.managers;
 
-import com.paradox.trello.exceptions.IllegalBoardException;
-import com.paradox.trello.exceptions.IllegalBoardListException;
-import com.paradox.trello.exceptions.IllegalCardException;
-import com.paradox.trello.exceptions.UnknownUserException;
+import com.paradox.trello.exceptions.*;
 import com.paradox.trello.services.BoardService;
 
 public class BoardManager implements IManager {
@@ -11,7 +8,7 @@ public class BoardManager implements IManager {
     private final BoardService boardService;
 
     private BoardManager() {
-        boardService = BoardService.getBoardServiceInstance();
+        boardService = BoardService.getInstance();
     }
 
     public static synchronized BoardManager getInstance() {
@@ -22,7 +19,7 @@ public class BoardManager implements IManager {
     }
 
     @Override
-    public void executeCommands(String[] commands) throws IllegalBoardException, UnknownUserException, IllegalBoardListException, IllegalCardException {
+    public void executeCommands(String[] commands) throws IllegalBoardException, UnknownUserException, IllegalBoardListException, IllegalCardException, IllegalBoardPrivacyException {
         if (commands[1].equals("CREATE")) {
             boardService.createBoard(commands[2], commands[3]);
         } else if (commands[1].equals("DELETE")) {
@@ -33,6 +30,8 @@ public class BoardManager implements IManager {
                 boardService.addMember(id, commands[3]);
             } else if (commands[2].equals("REMOVE_MEMBER")) {
                 boardService.removeMember(id, commands[3]);
+            } else {
+                boardService.updateBoard(id, commands[2], commands[3]);
             }
         }
     }

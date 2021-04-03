@@ -61,7 +61,6 @@ public class Card {
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", assignedUser=" + assignedUser +
-                ", boardList=" + boardList +
                 '}';
     }
 }

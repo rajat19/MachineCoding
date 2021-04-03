@@ -1,5 +1,6 @@
 package com.paradox.trello.services;
 
+import com.paradox.trello.exceptions.UnknownUserException;
 import com.paradox.trello.models.User;
 
 import java.util.HashMap;
@@ -27,5 +28,12 @@ public class UserService {
 
     public Map<String, User> getUserMap() {
         return userMap;
+    }
+
+    public User getUser(String id) throws UnknownUserException {
+        if (!userMap.containsKey(id)) {
+            throw new UnknownUserException(id);
+        }
+        return userMap.get(id);
     }
 }

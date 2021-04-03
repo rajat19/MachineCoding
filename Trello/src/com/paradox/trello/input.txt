@@ -1,0 +1,41 @@
+USER ADD user1 Rajat rajatsri94@gmail.com
+USER ADD user2 Abhinav raiabhinavrai1994@gmail.com
+USER ADD user3 Prashant prashant.pandey687@gmail.com
+USER ADD user4 Harsh harshgupta1994@gmail.com
+SHOW
+BOARD CREATE board1 phoenixBoard
+SHOW BOARD board1
+SHOW
+BOARD board1 name phoenix.tech
+BOARD board1 privacy PRIVATE
+SHOW BOARD board1
+BOARD CREATE board2 paradoxBoard
+SHOW
+BOARD board1 ADD_MEMBER user1
+BOARD board1 ADD_MEMBER user2
+BOARD board1 ADD_MEMBER user3
+BOARD board1 REMOVE_MEMBER user2
+SHOW BOARD board1
+BOARD DELETE board2
+SHOW BOARD board2
+SHOW
+LIST CREATE board1 list1 Mock Interviews
+SHOW LIST list1
+LIST list1 name Mock Interviews - Applied
+SHOW LIST list1
+LIST CREATE board1 list2 Mock Interviews - Scheduled
+SHOW BOARD board1
+CARD CREATE list1 card1 abcd@gmail.com
+CARD CREATE list1 card2 abcda@gmail.com
+SHOW LIST list1
+CARD card1 name abcde@gmail.com
+CARD card1 description At_7PM
+SHOW LIST list1
+CARD card1 ASSIGN gaurav@workat.tech
+SHOW CARD card1
+CARD card1 MOVE list2
+SHOW LIST list1
+SHOW LIST list2
+CARD card1 UNASSIGN
+SHOW CARD card1
+SHOW
