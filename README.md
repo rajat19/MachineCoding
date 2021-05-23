@@ -1,2 +1,2 @@
-# MachingCoding
-my solutions in java for different machine coding question
+# Machine Coding (LLD) [WIP]
+my solutions in java for different machine coding questions.
