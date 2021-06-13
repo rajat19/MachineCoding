@@ -4,28 +4,27 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Consumer {
-    private String id;
-    private Map<String, Topic> subscribedTopicMap;
+    private final String id;
+    private Topic topic;
 
     public Consumer(String id) {
         this.id = id;
-        this.subscribedTopicMap = new HashMap<>();
     }
 
     public String getId() {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public Topic getTopic() {
+        return topic;
     }
 
     public void subscribeTopic(Topic topic) {
-        subscribedTopicMap.put(topic.getId(), topic);
+        this.topic = topic;
     }
 
-    public void unsubscribeTopic(Topic topic) {
-        subscribedTopicMap.remove(topic.getId());
+    public void unsubscribeTopic() {
+        this.topic = null;
     }
 
     public void printMessage(String message) {

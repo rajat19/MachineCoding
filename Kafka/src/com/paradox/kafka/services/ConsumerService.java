@@ -1,6 +1,7 @@
 package com.paradox.kafka.services;
 
 import com.paradox.kafka.exceptions.IllegalConsumerException;
+import com.paradox.kafka.exceptions.IllegalTopicException;
 import com.paradox.kafka.models.Consumer;
 import com.paradox.kafka.models.Topic;
 
@@ -10,9 +11,11 @@ import java.util.Map;
 public class ConsumerService {
     private Map<String, Consumer> consumerMap;
     private static ConsumerService consumerService;
+    private final QueueService queueService;
 
     private ConsumerService() {
         this.consumerMap = new HashMap<>();
+        this.queueService = QueueService.getInstance();
     }
 
     public static ConsumerService getInstance() {
@@ -31,21 +34,23 @@ public class ConsumerService {
         consumerMap.put(consumerId, consumer);
     }
 
-    public void subscribe(String consumerId, Topic topic) throws IllegalConsumerException {
+    public void subscribe(String consumerId, String topicName) throws IllegalConsumerException, IllegalTopicException {
         if (!consumerMap.containsKey(consumerId)) {
             throw new IllegalConsumerException(consumerId);
         }
+        Topic topic = queueService.getTopic(topicName);
         Consumer consumer = consumerMap.get(consumerId);
         topic.addConsumer(consumer);
         consumer.subscribeTopic(topic);
     }
 
-    public void unsubscribe(String consumerId, Topic topic) throws IllegalConsumerException {
+    public void unsubscribe(String consumerId) throws IllegalConsumerException {
         if (!consumerMap.containsKey(consumerId)) {
             throw new IllegalConsumerException(consumerId);
         }
         Consumer consumer = consumerMap.get(consumerId);
+        Topic topic = consumer.getTopic();
         topic.removeConsumer(consumer);
-        consumer.unsubscribeTopic(topic);
+        consumer.unsubscribeTopic();
     }
 }

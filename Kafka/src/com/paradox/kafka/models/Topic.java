@@ -6,22 +6,26 @@ import java.util.List;
 import java.util.Map;
 
 public class Topic {
-    private String id;
+    private String name;
     private List<String> messages;
     private Map<String, Consumer> subscribedConsumerMap;
+    private int partitions;
+    private int replicas;
 
-    public Topic(String id) {
-        this.id = id;
+    public Topic(String name, int partitions, int replicas) {
+        this.name = name;
+        this.partitions = partitions;
+        this.replicas = replicas;
         this.messages = new ArrayList<>();
         this.subscribedConsumerMap = new HashMap<>();
     }
 
-    public String getId() {
-        return id;
+    public String getName() {
+        return name;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void addMessage(String message) {
