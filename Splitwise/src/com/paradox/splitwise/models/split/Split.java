@@ -1,13 +1,12 @@
 package com.paradox.splitwise.models.split;
 
 import com.paradox.splitwise.models.User;
-import com.paradox.splitwise.models.enums.SplitType;
 
 public abstract class Split {
     private User user;
     private double amount;
 
-    public Split(User user) {
+    protected Split(User user) {
         this.user = user;
     }
 

@@ -22,12 +22,12 @@ public class SplitwiseApplication {
 
         URL url = SplitwiseApplication.class.getResource("./input.txt");
         File file = new File(url.getPath());
-        Scanner scanner = new Scanner(file);
-
-        while (scanner.hasNextLine()) {
-            String command = scanner.nextLine();
-            String[] commands = command.split(" ");
-            CommandManager.executeCommands(commands);
+        try (Scanner scanner = new Scanner(file)) {
+            while (scanner.hasNextLine()) {
+                String command = scanner.nextLine();
+                String[] commands = command.split(" ");
+                CommandManager.executeCommands(commands);
+            }
         }
     }
 }

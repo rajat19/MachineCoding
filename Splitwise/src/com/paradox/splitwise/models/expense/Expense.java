@@ -13,7 +13,7 @@ public abstract class Expense {
     private List<Split> splits;
     private ExpenseMetaData metaData;
 
-    public Expense(double amount, User paidBy, List<Split> splits, ExpenseMetaData metaData) {
+    protected Expense(double amount, User paidBy, List<Split> splits, ExpenseMetaData metaData) {
         this.amount = amount;
         this.paidBy = paidBy;
         this.splits = splits;

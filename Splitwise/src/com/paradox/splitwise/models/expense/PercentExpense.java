@@ -25,9 +25,6 @@ public class PercentExpense extends Expense{
         for (Split split: getSplits()) {
             sumSplitPercent += split.getShare();
         }
-        if (totalPercent != sumSplitPercent) {
-            return false;
-        }
-        return true;
+        return totalPercent == sumSplitPercent;
     }
 }

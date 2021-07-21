@@ -26,10 +26,6 @@ public class ExactExpense extends Expense{
             sumSplitAmount += split.getShare();
         }
 
-        if(totalAmount != sumSplitAmount) {
-            return false;
-        }
-
-        return true;
+        return totalAmount == sumSplitAmount;
     }
 }

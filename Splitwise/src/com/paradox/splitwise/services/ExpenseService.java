@@ -10,6 +10,8 @@ import com.paradox.splitwise.models.split.Split;
 import java.util.List;
 
 public class ExpenseService {
+    private ExpenseService() {}
+
     public static Expense createExpense(ExpenseType expenseType,
                                         double amount,
                                         User paidBy,
@@ -20,7 +22,7 @@ public class ExpenseService {
                 return new ExactExpense(amount, paidBy, splits, expenseMetaData);
             case EQUAL:
                 int totalSplits = splits.size();
-                double splitAmount = ((double) Math.round(amount*100/totalSplits))/100.0;
+                double splitAmount = Math.round(amount*100/totalSplits)/100.0;
                 for (Split split: splits) {
                     split.setAmount(splitAmount);
                 }
