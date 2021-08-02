@@ -1,12 +1,10 @@
-package com.paradox.parkingLot.services;
+package com.paradox.parkinglot.services;
 
-import com.paradox.parkingLot.exceptions.NoFreeSlotAvailableException;
-import com.paradox.parkingLot.exceptions.ParkingLotAlreadyExistsException;
-import com.paradox.parkingLot.exceptions.ParkingLotNotExistsException;
-import com.paradox.parkingLot.models.ParkingLot;
-import com.paradox.parkingLot.models.parkingSpot.ParkingSpot;
-import com.paradox.parkingLot.models.vehicle.Vehicle;
-import com.paradox.parkingLot.strategies.ParkingStrategy;
+import com.paradox.parkinglot.exceptions.*;
+import com.paradox.parkinglot.models.ParkingLot;
+import com.paradox.parkinglot.models.parking_spot.ParkingSpot;
+import com.paradox.parkinglot.models.vehicle.Vehicle;
+import com.paradox.parkinglot.strategies.ParkingStrategy;
 
 import java.util.List;
 import java.util.Map;
@@ -28,7 +26,7 @@ public class ParkingLotService {
         }
     }
 
-    public Integer park(Vehicle vehicle) throws NoFreeSlotAvailableException, ParkingLotNotExistsException {
+    public Integer park(Vehicle vehicle) throws NoFreeSlotAvailableException, ParkingLotNotExistsException, SlotNotExistsException, SlotNotFreeException {
         if (parkingLot == null) {
             throw new ParkingLotNotExistsException();
         }
@@ -38,7 +36,7 @@ public class ParkingLotService {
         return nextFreeSlot;
     }
 
-    public void makeSlotFree(Integer slotNumber) throws ParkingLotNotExistsException {
+    public void makeSlotFree(Integer slotNumber) throws ParkingLotNotExistsException, SlotNotExistsException {
         if (parkingLot == null) {
             throw new ParkingLotNotExistsException();
         }

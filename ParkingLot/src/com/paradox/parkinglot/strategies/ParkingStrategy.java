@@ -1,6 +1,6 @@
-package com.paradox.parkingLot.strategies;
+package com.paradox.parkinglot.strategies;
 
-import com.paradox.parkingLot.exceptions.NoFreeSlotAvailableException;
+import com.paradox.parkinglot.exceptions.NoFreeSlotAvailableException;
 
 public interface ParkingStrategy {
     void addParkingSpot(Integer parkingSpotNumber);

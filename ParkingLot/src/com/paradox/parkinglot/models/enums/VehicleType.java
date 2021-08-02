@@ -1,4 +1,4 @@
-package com.paradox.parkingLot.models.enums;
+package com.paradox.parkinglot.models.enums;
 
 public enum VehicleType {
     CAR,

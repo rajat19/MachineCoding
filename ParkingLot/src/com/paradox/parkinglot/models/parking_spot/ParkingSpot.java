@@ -1,8 +1,7 @@
-package com.paradox.parkingLot.models.parkingSpot;
+package com.paradox.parkinglot.models.parking_spot;
 
-import com.paradox.parkingLot.models.enums.ParkingSpotType;
-import com.paradox.parkingLot.models.vehicle.Car;
-import com.paradox.parkingLot.models.vehicle.Vehicle;
+import com.paradox.parkinglot.models.enums.ParkingSpotType;
+import com.paradox.parkinglot.models.vehicle.Vehicle;
 
 public abstract class ParkingSpot {
     private String number;

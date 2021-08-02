@@ -1,4 +1,4 @@
-package com.paradox.parkingLot.exceptions;
+package com.paradox.parkinglot.exceptions;
 
 public class NoFreeSlotAvailableException extends Exception{
     public NoFreeSlotAvailableException() {

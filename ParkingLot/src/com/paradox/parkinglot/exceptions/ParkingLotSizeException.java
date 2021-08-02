@@ -1,4 +1,4 @@
-package com.paradox.parkingLot.exceptions;
+package com.paradox.parkinglot.exceptions;
 
 public class ParkingLotSizeException extends Exception{
     public ParkingLotSizeException(int capacity) {

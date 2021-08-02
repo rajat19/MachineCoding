@@ -1,6 +1,6 @@
-package com.paradox.parkingLot.models.vehicle;
+package com.paradox.parkinglot.models.vehicle;
 
-import com.paradox.parkingLot.models.enums.VehicleType;
+import com.paradox.parkinglot.models.enums.VehicleType;
 
 public abstract class Vehicle {
     private String licenseNumber;

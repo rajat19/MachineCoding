@@ -1,6 +1,6 @@
-package com.paradox.parkingLot.models.parkingSpot;
+package com.paradox.parkinglot.models.parking_spot;
 
-import com.paradox.parkingLot.models.enums.ParkingSpotType;
+import com.paradox.parkinglot.models.enums.ParkingSpotType;
 
 public class CompactSpot extends ParkingSpot{
     public CompactSpot() {
