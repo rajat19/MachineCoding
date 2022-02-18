@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.paradox.cab.models</OriginalElement>
+  <nodes>
+    <node x="120.125" y="-10.0">com.paradox.cab.models.enums.TripStatus</node>
+    <node x="227.125" y="402.0">com.paradox.cab.models.Trip</node>
+    <node x="414.5" y="174.0">com.paradox.cab.models.Cab</node>
+    <node x="20.5" y="218.0">com.paradox.cab.models.Rider</node>
+    <node x="394.09782608695656" y="-39.0">com.paradox.cab.models.Location</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.paradox.cab.models.Trip" target="com.paradox.cab.models.Cab" relationship="TO_ONE">
+      <point x="89.0" y="-15.0" />
+      <point x="502.0" y="503.0" />
+      <point x="-15.0" y="83.0" />
+    </edge>
+    <edge source="com.paradox.cab.models.Cab" target="com.paradox.cab.models.Trip" relationship="TO_ONE">
+      <point x="15.0" y="83.0" />
+      <point x="532.0" y="533.0" />
+      <point x="89.0" y="15.0" />
+    </edge>
+    <edge source="com.paradox.cab.models.Trip" target="com.paradox.cab.models.Location" relationship="DEPENDENCY">
+      <point x="80.875" y="-116.0" />
+      <point x="397.0" y="378.0" />
+      <point x="375.0" y="378.0" />
+      <point x="375.0" y="22.0" />
+      <point x="-105.99982608695655" y="0.0" />
+    </edge>
+    <edge source="com.paradox.cab.models.Cab" target="com.paradox.cab.models.Trip" relationship="DEPENDENCY">
+      <point x="0.0" y="83.0" />
+      <point x="517.0" y="518.0" />
+      <point x="89.0" y="0.0" />
+    </edge>
+    <edge source="com.paradox.cab.models.Trip" target="com.paradox.cab.models.enums.TripStatus" relationship="DEPENDENCY">
+      <point x="-89.0" y="0.0" />
+      <point x="0.0" y="72.0" />
+    </edge>
+    <edge source="com.paradox.cab.models.Trip" target="com.paradox.cab.models.Cab" relationship="DEPENDENCY">
+      <point x="89.0" y="30.0" />
+      <point x="547.0" y="548.0" />
+      <point x="30.0" y="83.0" />
+    </edge>
+    <edge source="com.paradox.cab.models.Trip" target="com.paradox.cab.models.Rider" relationship="TO_ONE">
+      <point x="-89.0" y="-15.0" />
+      <point x="110.5" y="503.0" />
+      <point x="15.0" y="50.0" />
+    </edge>
+    <edge source="com.paradox.cab.models.Trip" target="com.paradox.cab.models.Location" relationship="TO_ONE">
+      <point x="38.375" y="-116.0" />
+      <point x="354.5" y="363.0" />
+      <point x="397.0" y="363.0" />
+      <point x="-103.09782608695656" y="61.0" />
+    </edge>
+    <edge source="com.paradox.cab.models.Cab" target="com.paradox.cab.models.Location" relationship="DEPENDENCY">
+      <point x="0.0" y="-83.0" />
+      <point x="16.90217391304344" y="61.0" />
+    </edge>
+    <edge source="com.paradox.cab.models.Trip" target="com.paradox.cab.models.Rider" relationship="DEPENDENCY">
+      <point x="-89.0" y="0.0" />
+      <point x="95.5" y="518.0" />
+      <point x="0.0" y="50.0" />
+    </edge>
+    <edge source="com.paradox.cab.models.Cab" target="com.paradox.cab.models.Location" relationship="TO_ONE">
+      <point x="-16.90217391304344" y="-83.0" />
+      <point x="0.0" y="61.0" />
+    </edge>
+    <edge source="com.paradox.cab.models.Trip" target="com.paradox.cab.models.enums.TripStatus" relationship="TO_ONE">
+      <point x="-89.0" y="15.0" />
+      <point x="-22.0" y="533.0" />
+      <point x="-22.0" y="62.0" />
+      <point x="-107.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="true" x="299.0" y="297.5" />
+  <SelectedNodes>
+    <node>com.paradox.cab.models.Cab</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

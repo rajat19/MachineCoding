@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.paradox.trello</OriginalElement>
+  <nodes>
+    <node x="213.35416666666669" y="214.0">com.paradox.trello.managers</node>
+    <node x="253.0" y="0.0">com.paradox.trello.models</node>
+    <node x="259.8541666666667" y="294.0">com.paradox.trello.TrelloApplication</node>
+    <node x="171.3984375" y="112.0">com.paradox.trello.services</node>
+    <node x="0.0" y="0.0">com.paradox.trello.exceptions</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.paradox.trello.services" target="com.paradox.trello.services" relationship="TO_ONE">
+      <point x="-21.625" y="15.0" />
+      <point x="236.2734375" y="172.0" />
+      <point x="141.3984375" y="172.0" />
+      <point x="141.3984375" y="119.5" />
+      <point x="-86.5" y="-7.5" />
+    </edge>
+    <edge source="com.paradox.trello.managers" target="com.paradox.trello.services" relationship="TO_ONE">
+      <point x="46.0" y="-15.0" />
+      <point x="351.3541666666667" y="193.0" />
+      <point x="322.7734375" y="193.0" />
+      <point x="64.875" y="15.0" />
+    </edge>
+    <edge source="com.paradox.trello.models" target="com.paradox.trello.models" relationship="TO_MANY">
+      <point x="-41.0" y="15.0" />
+      <point x="294.0" y="60.0" />
+      <point x="223.0" y="60.0" />
+      <point x="223.0" y="15.0" />
+      <point x="-82.0" y="-0.0" />
+    </edge>
+    <edge source="com.paradox.trello.managers" target="com.paradox.trello.exceptions" relationship="DEPENDENCY">
+      <point x="-46.0" y="-15.0" />
+      <point x="259.3541666666667" y="193.0" />
+      <point x="262.4166666666667" y="193.0" />
+      <point x="262.4166666666667" y="183.0" />
+      <point x="91.5" y="183.0" />
+      <point x="91.5" y="91.0" />
+      <point x="48.25" y="91.0" />
+      <point x="-48.25" y="15.0" />
+    </edge>
+    <edge source="com.paradox.trello.managers" target="com.paradox.trello.services" relationship="DEPENDENCY">
+      <point x="-46.0" y="-15.0" />
+      <point x="259.3541666666667" y="193.0" />
+      <point x="262.4166666666667" y="193.0" />
+      <point x="262.4166666666667" y="183.0" />
+      <point x="279.5234375" y="183.0" />
+      <point x="21.625" y="15.0" />
+    </edge>
+    <edge source="com.paradox.trello.services" target="com.paradox.trello.models" relationship="TO_MANY">
+      <point x="43.25" y="-15.0" />
+      <point x="301.1484375" y="91.0" />
+      <point x="376.0" y="91.0" />
+      <point x="41.0" y="15.0" />
+    </edge>
+    <edge source="com.paradox.trello.managers" target="com.paradox.trello.managers" relationship="DEPENDENCY">
+      <point x="-46.0" y="15.0" />
+      <point x="259.3541666666667" y="264.0" />
+      <point x="193.35416666666669" y="264.0" />
+      <point x="193.35416666666669" y="229.0" />
+      <point x="-92.0" y="-0.0" />
+    </edge>
+    <edge source="com.paradox.trello.managers" target="com.paradox.trello.models" relationship="DEPENDENCY">
+      <point x="-46.0" y="-15.0" />
+      <point x="259.3541666666667" y="193.0" />
+      <point x="262.4166666666667" y="193.0" />
+      <point x="262.4166666666667" y="183.0" />
+      <point x="388.53211805555554" y="183.0" />
+      <point x="388.53211805555554" y="91.0" />
+      <point x="403.33333333333337" y="91.0" />
+      <point x="68.33333333333337" y="15.0" />
+    </edge>
+    <edge source="com.paradox.trello.models" target="com.paradox.trello.models" relationship="DEPENDENCY">
+      <point x="-13.666666666666671" y="15.0" />
+      <point x="321.3333333333333" y="70.0" />
+      <point x="213.0" y="70.0" />
+      <point x="213.0" y="5.0" />
+      <point x="-82.0" y="-10.0" />
+    </edge>
+    <edge source="com.paradox.trello.TrelloApplication" target="com.paradox.trello.managers" relationship="CREATE">
+      <point x="0.0" y="-15.0" />
+      <point x="46.0" y="15.0" />
+    </edge>
+    <edge source="com.paradox.trello.services" target="com.paradox.trello.models" relationship="CREATE">
+      <point x="-43.25" y="-15.0" />
+      <point x="214.6484375" y="91.0" />
+      <point x="252.8984375" y="91.0" />
+      <point x="252.8984375" y="81.0" />
+      <point x="348.6666666666667" y="81.0" />
+      <point x="13.666666666666686" y="15.0" />
+    </edge>
+    <edge source="com.paradox.trello.services" target="com.paradox.trello.exceptions" relationship="CREATE">
+      <point x="-43.25" y="-15.0" />
+      <point x="214.6484375" y="91.0" />
+      <point x="252.8984375" y="91.0" />
+      <point x="252.8984375" y="81.0" />
+      <point x="144.75" y="81.0" />
+      <point x="48.25" y="15.0" />
+    </edge>
+    <edge source="com.paradox.trello.services" target="com.paradox.trello.services" relationship="DEPENDENCY">
+      <point x="-64.875" y="15.0" />
+      <point x="193.0234375" y="162.0" />
+      <point x="151.3984375" y="162.0" />
+      <point x="151.3984375" y="134.5" />
+      <point x="-86.5" y="7.5" />
+    </edge>
+    <edge source="com.paradox.trello.models" target="com.paradox.trello.models" relationship="TO_ONE">
+      <point x="-68.33333333333333" y="15.0" />
+      <point x="266.6666666666667" y="50.0" />
+      <point x="233.0" y="50.0" />
+      <point x="233.0" y="25.0" />
+      <point x="-82.0" y="10.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="true" x="221.5" y="162.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

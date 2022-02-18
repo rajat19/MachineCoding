@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.paradox.cab.managers</OriginalElement>
+  <nodes>
+    <node x="10.5" y="107.0">com.paradox.cab.managers.CabManager</node>
+    <node x="156.58333333333331" y="0.0">com.paradox.cab.managers.IManager</node>
+    <node x="281.5" y="247.0">com.paradox.cab.managers.CommandManager</node>
+    <node x="286.5" y="107.0">com.paradox.cab.managers.TripManager</node>
+    <node x="562.5" y="107.0">com.paradox.cab.managers.RiderManager</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.paradox.cab.managers.CommandManager" target="com.paradox.cab.managers.RiderManager" relationship="TO_ONE">
+      <point x="128.0" y="0.0" />
+      <point x="690.5" y="308.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="com.paradox.cab.managers.CommandManager" target="com.paradox.cab.managers.TripManager" relationship="TO_ONE">
+      <point x="5.0" y="-61.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="com.paradox.cab.managers.RiderManager" target="com.paradox.cab.managers.IManager" relationship="REALIZATION">
+      <point x="0.0" y="-39.0" />
+      <point x="690.5" y="81.0" />
+      <point x="284.583" y="81.0" />
+      <point x="-3.3333333328755543E-4" y="27.5" />
+    </edge>
+    <edge source="com.paradox.cab.managers.CommandManager" target="com.paradox.cab.managers.RiderManager" relationship="CREATE">
+      <point x="128.0" y="15.0" />
+      <point x="705.5" y="323.0" />
+      <point x="15.0" y="39.0" />
+    </edge>
+    <edge source="com.paradox.cab.managers.CommandManager" target="com.paradox.cab.managers.CabManager" relationship="CREATE">
+      <point x="-128.0" y="-15.0" />
+      <point x="138.5" y="293.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="com.paradox.cab.managers.CommandManager" target="com.paradox.cab.managers.CabManager" relationship="TO_ONE">
+      <point x="-128.0" y="-30.0" />
+      <point x="153.5" y="278.0" />
+      <point x="15.0" y="39.0" />
+    </edge>
+    <edge source="com.paradox.cab.managers.TripManager" target="com.paradox.cab.managers.IManager" relationship="REALIZATION">
+      <point x="0.0" y="-39.0" />
+      <point x="414.5" y="81.0" />
+      <point x="284.583" y="81.0" />
+      <point x="-3.3333333328755543E-4" y="27.5" />
+    </edge>
+    <edge source="com.paradox.cab.managers.CommandManager" target="com.paradox.cab.managers.IManager" relationship="REALIZATION">
+      <point x="-128.0" y="0.0" />
+      <point x="-7.0" y="308.0" />
+      <point x="-7.0" y="27.5" />
+      <point x="-128.0" y="0.0" />
+    </edge>
+    <edge source="com.paradox.cab.managers.CabManager" target="com.paradox.cab.managers.IManager" relationship="REALIZATION">
+      <point x="0.0" y="-39.0" />
+      <point x="138.5" y="81.0" />
+      <point x="284.583" y="81.0" />
+      <point x="-3.3333333328755543E-4" y="27.5" />
+    </edge>
+    <edge source="com.paradox.cab.managers.CommandManager" target="com.paradox.cab.managers.TripManager" relationship="CREATE">
+      <point x="20.0" y="-61.0" />
+      <point x="15.0" y="39.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.8747044917257684" showDependencies="true" x="406.0" y="184.5" />
+  <SelectedNodes>
+    <node>com.paradox.cab.managers.CommandManager</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

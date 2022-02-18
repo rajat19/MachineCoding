@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.paradox.snakeladders.models</OriginalElement>
+  <nodes>
+    <node x="143.16666666666669" y="-28.0">com.paradox.snakeladders.models.Ladder</node>
+    <node x="298.6666666666667" y="0.0">com.paradox.snakeladders.models.Dice</node>
+    <node x="11.666666666666671" y="439.0">com.paradox.snakeladders.models.Board</node>
+    <node x="97.06481481481481" y="310.0">com.paradox.snakeladders.models.Player</node>
+    <node x="16.16666666666667" y="-28.0">com.paradox.snakeladders.models.Snake</node>
+    <node x="43.814814814814824" y="137.0">com.paradox.snakeladders.models.Cell</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.paradox.snakeladders.models.Ladder" target="com.paradox.snakeladders.models.Cell" relationship="TO_ONE">
+      <point x="-46.0" y="38.5" />
+      <point x="17.851851851851848" y="-60.5" />
+    </edge>
+    <edge source="com.paradox.snakeladders.models.Cell" target="com.paradox.snakeladders.models.Ladder" relationship="TO_ONE">
+      <point x="63.85185185185185" y="-60.5" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="com.paradox.snakeladders.models.Player" target="com.paradox.snakeladders.models.Cell" relationship="DEPENDENCY">
+      <point x="0.0" y="-38.5" />
+      <point x="26.24999999999997" y="60.5" />
+    </edge>
+    <edge source="com.paradox.snakeladders.models.Cell" target="com.paradox.snakeladders.models.Snake" relationship="DEPENDENCY">
+      <point x="-48.14814814814817" y="-60.5" />
+      <point x="15.0" y="38.5" />
+    </edge>
+    <edge source="com.paradox.snakeladders.models.Snake" target="com.paradox.snakeladders.models.Cell" relationship="DEPENDENCY">
+      <point x="46.0" y="38.5" />
+      <point x="-17.148148148148167" y="-60.5" />
+    </edge>
+    <edge source="com.paradox.snakeladders.models.Snake" target="com.paradox.snakeladders.models.Cell" relationship="TO_ONE">
+      <point x="0.0" y="38.5" />
+      <point x="-63.14814814814817" y="-60.5" />
+    </edge>
+    <edge source="com.paradox.snakeladders.models.Cell" target="com.paradox.snakeladders.models.Snake" relationship="TO_ONE">
+      <point x="-78.14814814814817" y="-60.5" />
+      <point x="-15.0" y="38.5" />
+    </edge>
+    <edge source="com.paradox.snakeladders.models.Board" target="com.paradox.snakeladders.models.Player" relationship="TO_ONE">
+      <point x="3.3333333331597714E-4" y="-71.5" />
+      <point x="132.667" y="413.0" />
+      <point x="159.065" y="413.0" />
+      <point x="1.8518518518817473E-4" y="38.5" />
+    </edge>
+    <edge source="com.paradox.snakeladders.models.Board" target="com.paradox.snakeladders.models.Player" relationship="TO_MANY">
+      <point x="3.3333333331597714E-4" y="-71.5" />
+      <point x="132.667" y="413.0" />
+      <point x="159.065" y="413.0" />
+      <point x="1.8518518518817473E-4" y="38.5" />
+    </edge>
+    <edge source="com.paradox.snakeladders.models.Board" target="com.paradox.snakeladders.models.Player" relationship="DEPENDENCY">
+      <point x="-14.999666666666684" y="-71.5" />
+      <point x="-41.39781481481481" y="38.5" />
+    </edge>
+    <edge source="com.paradox.snakeladders.models.Board" target="com.paradox.snakeladders.models.Cell" relationship="TO_MANY">
+      <point x="-53.101851851851876" y="-71.5" />
+      <point x="-53.25000000000003" y="60.5" />
+    </edge>
+    <edge source="com.paradox.snakeladders.models.Player" target="com.paradox.snakeladders.models.Cell" relationship="TO_ONE">
+      <point x="-26.24999999999997" y="-38.5" />
+      <point x="0.0" y="60.5" />
+    </edge>
+    <edge source="com.paradox.snakeladders.models.Cell" target="com.paradox.snakeladders.models.Ladder" relationship="DEPENDENCY">
+      <point x="48.85185185185185" y="-60.5" />
+      <point x="-15.0" y="38.5" />
+    </edge>
+    <edge source="com.paradox.snakeladders.models.Ladder" target="com.paradox.snakeladders.models.Cell" relationship="DEPENDENCY">
+      <point x="15.0" y="38.5" />
+      <point x="78.85185185185185" y="-60.5" />
+    </edge>
+    <edge source="com.paradox.snakeladders.models.Board" target="com.paradox.snakeladders.models.Cell" relationship="CREATE">
+      <point x="-68.10185185185188" y="-71.5" />
+      <point x="-68.25000000000003" y="60.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="true" x="230.5" y="291.0" />
+  <SelectedNodes>
+    <node>com.paradox.snakeladders.models.Snake</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

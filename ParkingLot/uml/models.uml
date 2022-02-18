@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.paradox.parkingLot.models</OriginalElement>
+  <nodes>
+    <node x="216.0" y="591.5">com.paradox.parkingLot.models.vehicle.MotorBike</node>
+    <node x="0.0" y="147.56043956043953">com.paradox.parkingLot.models.enums.VehicleType</node>
+    <node x="731.9458333333333" y="821.5">com.paradox.parkingLot.models.parkingSpot.CompactSpot</node>
+    <node x="116.0" y="591.5">com.paradox.parkingLot.models.vehicle.Car</node>
+    <node x="591.304861111111" y="240.0">com.paradox.parkingLot.models.enums.ParkingSpotType</node>
+    <node x="289.304861111111" y="295.5">com.paradox.parkingLot.models.vehicle.Vehicle</node>
+    <node x="392.4840277777777" y="512.0">com.paradox.parkingLot.models.parkingSpot.ParkingSpot</node>
+    <node x="911.9458333333333" y="821.5">com.paradox.parkingLot.models.parkingSpot.MotorBikeSpot</node>
+    <node x="578.9458333333333" y="821.5">com.paradox.parkingLot.models.parkingSpot.LargeSpot</node>
+    <node x="0.0" y="591.5">com.paradox.parkingLot.models.vehicle.Truck</node>
+    <node x="253.94583333333333" y="753.0">com.paradox.parkingLot.models.ParkingLot</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.paradox.parkingLot.models.parkingSpot.LargeSpot" target="com.paradox.parkingLot.models.parkingSpot.ParkingSpot" relationship="GENERALIZATION">
+      <point x="-14.9998333333333" y="-15.0" />
+      <point x="630.446" y="798.0" />
+      <point x="581.5" y="798.0" />
+      <point x="79.51597222222227" y="94.5" />
+    </edge>
+    <edge source="com.paradox.parkingLot.models.parkingSpot.ParkingSpot" target="com.paradox.parkingLot.models.vehicle.Vehicle" relationship="DEPENDENCY">
+      <point x="-109.50002777777775" y="0.0" />
+      <point x="371.0" y="606.5" />
+      <point x="371.0" y="655.5" />
+      <point x="-17.5" y="655.5" />
+      <point x="-17.5" y="130.06" />
+      <point x="381.305" y="130.06" />
+      <point x="1.388888890119233E-4" y="-38.5" />
+    </edge>
+    <edge source="com.paradox.parkingLot.models.parkingSpot.LargeSpot" target="com.paradox.parkingLot.models.enums.ParkingSpotType" relationship="DEPENDENCY">
+      <point x="1.6666666670062114E-4" y="-15.0" />
+      <point x="645.446" y="773.0" />
+      <point x="718.805" y="773.0" />
+      <point x="1.388888889550799E-4" y="94.0" />
+    </edge>
+    <edge source="com.paradox.parkingLot.models.parkingSpot.MotorBikeSpot" target="com.paradox.parkingLot.models.parkingSpot.ParkingSpot" relationship="GENERALIZATION">
+      <point x="-14.9998333333333" y="-15.0" />
+      <point x="981.446" y="798.0" />
+      <point x="581.5" y="798.0" />
+      <point x="79.51597222222227" y="94.5" />
+    </edge>
+    <edge source="com.paradox.parkingLot.models.vehicle.Vehicle" target="com.paradox.parkingLot.models.enums.VehicleType" relationship="DEPENDENCY">
+      <point x="-92.0" y="-20.939560439560466" />
+      <point x="111.5" y="71.5" />
+    </edge>
+    <edge source="com.paradox.parkingLot.models.vehicle.Car" target="com.paradox.parkingLot.models.vehicle.Vehicle" relationship="GENERALIZATION">
+      <point x="-15.0" y="-15.0" />
+      <point x="141.0" y="558.0" />
+      <point x="369.5" y="558.0" />
+      <point x="-11.804861111110995" y="38.5" />
+    </edge>
+    <edge source="com.paradox.parkingLot.models.vehicle.Truck" target="com.paradox.parkingLot.models.enums.VehicleType" relationship="DEPENDENCY">
+      <point x="-30.0" y="-15.0" />
+      <point x="18.0" y="524.0" />
+      <point x="111.5" y="524.0" />
+      <point x="0.0" y="93.99956043956047" />
+    </edge>
+    <edge source="com.paradox.parkingLot.models.vehicle.MotorBike" target="com.paradox.parkingLot.models.enums.VehicleType" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.0" />
+      <point x="282.0" y="524.0" />
+      <point x="111.5" y="524.0" />
+      <point x="0.0" y="93.99956043956047" />
+    </edge>
+    <edge source="com.paradox.parkingLot.models.parkingSpot.ParkingSpot" target="com.paradox.parkingLot.models.vehicle.Vehicle" relationship="TO_ONE">
+      <point x="-102.0" y="-94.5" />
+      <point x="18.67916666666673" y="38.5" />
+    </edge>
+    <edge source="com.paradox.parkingLot.models.ParkingLot" target="com.paradox.parkingLot.models.parkingSpot.ParkingSpot" relationship="TO_MANY">
+      <point x="110.53819444444446" y="-83.5" />
+      <point x="15.000000000000057" y="94.5" />
+    </edge>
+    <edge source="com.paradox.parkingLot.models.ParkingLot" target="com.paradox.parkingLot.models.vehicle.Vehicle" relationship="DEPENDENCY">
+      <point x="1.6666666670062114E-4" y="-83.5" />
+      <point x="406.446" y="718.5" />
+      <point x="371.0" y="718.5" />
+      <point x="371.0" y="655.5" />
+      <point x="-17.5" y="655.5" />
+      <point x="-17.5" y="130.06" />
+      <point x="381.305" y="130.06" />
+      <point x="1.388888890119233E-4" y="-38.5" />
+    </edge>
+    <edge source="com.paradox.parkingLot.models.vehicle.Car" target="com.paradox.parkingLot.models.enums.VehicleType" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.0" />
+      <point x="156.0" y="524.0" />
+      <point x="111.5" y="524.0" />
+      <point x="0.0" y="93.99956043956047" />
+    </edge>
+    <edge source="com.paradox.parkingLot.models.parkingSpot.CompactSpot" target="com.paradox.parkingLot.models.enums.ParkingSpotType" relationship="DEPENDENCY">
+      <point x="1.6666666670062114E-4" y="-15.0" />
+      <point x="811.946" y="773.0" />
+      <point x="718.805" y="773.0" />
+      <point x="1.388888889550799E-4" y="94.0" />
+    </edge>
+    <edge source="com.paradox.parkingLot.models.parkingSpot.ParkingSpot" target="com.paradox.parkingLot.models.enums.ParkingSpotType" relationship="DEPENDENCY">
+      <point x="96.82083333333327" y="-94.5" />
+      <point x="-120.0" y="94.0" />
+    </edge>
+    <edge source="com.paradox.parkingLot.models.ParkingLot" target="com.paradox.parkingLot.models.parkingSpot.ParkingSpot" relationship="DEPENDENCY">
+      <point x="95.5381944444444" y="-83.5" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="com.paradox.parkingLot.models.vehicle.Vehicle" target="com.paradox.parkingLot.models.enums.VehicleType" relationship="TO_ONE">
+      <point x="-92.0" y="-5.939560439560466" />
+      <point x="111.5" y="86.5" />
+    </edge>
+    <edge source="com.paradox.parkingLot.models.parkingSpot.ParkingSpot" target="com.paradox.parkingLot.models.enums.ParkingSpotType" relationship="TO_ONE">
+      <point x="0.0" y="-94.5" />
+      <point x="501.9840277777777" y="334.0" />
+      <point x="-127.5" y="0.0" />
+    </edge>
+    <edge source="com.paradox.parkingLot.models.parkingSpot.MotorBikeSpot" target="com.paradox.parkingLot.models.enums.ParkingSpotType" relationship="DEPENDENCY">
+      <point x="1.6666666670062114E-4" y="-15.0" />
+      <point x="996.446" y="773.0" />
+      <point x="718.805" y="773.0" />
+      <point x="1.388888889550799E-4" y="94.0" />
+    </edge>
+    <edge source="com.paradox.parkingLot.models.parkingSpot.CompactSpot" target="com.paradox.parkingLot.models.parkingSpot.ParkingSpot" relationship="GENERALIZATION">
+      <point x="-14.9998333333333" y="-15.0" />
+      <point x="796.946" y="798.0" />
+      <point x="581.5" y="798.0" />
+      <point x="79.51597222222227" y="94.5" />
+    </edge>
+    <edge source="com.paradox.parkingLot.models.vehicle.Truck" target="com.paradox.parkingLot.models.vehicle.Vehicle" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="48.0" y="558.0" />
+      <point x="369.5" y="558.0" />
+      <point x="-11.804861111110995" y="38.5" />
+    </edge>
+    <edge source="com.paradox.parkingLot.models.vehicle.MotorBike" target="com.paradox.parkingLot.models.vehicle.Vehicle" relationship="GENERALIZATION">
+      <point x="-15.0" y="-15.0" />
+      <point x="267.0" y="558.0" />
+      <point x="369.5" y="558.0" />
+      <point x="-11.804861111110995" y="38.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.8945487042001787" showDependencies="true" x="531.5" y="525.0" />
+  <SelectedNodes>
+    <node>com.paradox.parkingLot.models.vehicle.Vehicle</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
