@@ -1,5 +1,7 @@
 package com.paradox.library.models.book;
 
+import com.paradox.library.models.enums.BookStatus;
+
 import java.util.List;
 
 public abstract class Book {
@@ -66,4 +68,6 @@ public abstract class Book {
     public void setAuthors(List<Author> authors) {
         this.authors = authors;
     }
+
+    protected abstract void updateBookItemStatus(BookStatus loaned);
 }

@@ -38,7 +38,8 @@ public class BookReservationService {
     public void lendBook(String barcode, String memberId) {
         Date creationDate = new Date();
     }
-    public BookLending fetchLendingDetails(String barcode) {
 
+    public BookLending fetchLendingDetails(String barcode) {
+        return bookLendingMap.get(barcode);
     }
 }

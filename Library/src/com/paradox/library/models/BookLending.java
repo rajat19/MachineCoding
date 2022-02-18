@@ -56,4 +56,8 @@ public class BookLending {
     public void setMemberId(String memberId) {
         this.memberId = memberId;
     }
+
+    public static boolean lendBook(String bookItemBarcode, String memberId) {
+        return true;
+    }
 }

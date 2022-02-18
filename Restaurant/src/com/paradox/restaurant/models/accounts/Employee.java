@@ -10,10 +10,11 @@ public class Employee extends Person{
     private Account account;
     private Restaurant restaurant;
 
-    public Employee(String name, String email, String phone, int employeeId, Date dateJoined) {
+    public Employee(String name, String email, String phone, int employeeId, Date dateJoined, Account account) {
         super(name, email, phone);
         this.employeeId = employeeId;
         this.dateJoined = dateJoined;
+        this.account = account;
     }
 
     public void setRestaurant(Restaurant restaurant) {

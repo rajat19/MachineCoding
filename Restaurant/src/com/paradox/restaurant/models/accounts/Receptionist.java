@@ -7,8 +7,8 @@ import java.util.Date;
 import java.util.List;
 
 public class Receptionist extends Employee{
-    public Receptionist(String name, String email, String phone, int employeeId, Date dateJoined) {
-        super(name, email, phone, employeeId, dateJoined);
+    public Receptionist(String name, String email, String phone, int employeeId, Date dateJoined, Account account) {
+        super(name, email, phone, employeeId, dateJoined, account);
     }
 
     public void createReservation(Customer customer, int tablesCount, Date bookingTime) {
