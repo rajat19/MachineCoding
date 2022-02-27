@@ -19,6 +19,9 @@ public class User extends Account{
         insertToTries(phoneNumber, firstName);
     }
 
+    private void insertToTries(String phoneNumber, String firstName) {
+    }
+
     @Override
     public void addContact(User user) {
 
@@ -60,9 +63,6 @@ public class User extends Account{
     }
 
     private void init(UserCategory userCategory) {
-        switch (userCategory) {
-            case FREE:
-                setContacts();
-        }
+
     }
 }

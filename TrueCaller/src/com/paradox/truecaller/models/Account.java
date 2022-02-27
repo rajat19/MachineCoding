@@ -19,7 +19,7 @@ public abstract class Account {
     private Business business;
     private UserCategory userCategory;
     private Map<String, User> contacts;
-    private CountingBloomFilter<String> blockedContacts;
+    private CountingBloomFilter blockedContacts;
     private Set<String> blockedSet;
     private ContactTrie contactTrie;
 
@@ -115,11 +115,11 @@ public abstract class Account {
         this.contacts = contacts;
     }
 
-    public CountingBloomFilter<String> getBlockedContacts() {
+    public CountingBloomFilter getBlockedContacts() {
         return blockedContacts;
     }
 
-    public void setBlockedContacts(CountingBloomFilter<String> blockedContacts) {
+    public void setBlockedContacts(CountingBloomFilter blockedContacts) {
         this.blockedContacts = blockedContacts;
     }
 
